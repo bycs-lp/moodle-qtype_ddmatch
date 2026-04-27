@@ -132,6 +132,7 @@ class qtype_ddmatch extends question_type {
             if ($key === false) {
                 $key = $matchsub->id;
                 $question->choices[$key] = $matchsub->answertext;
+                $question->choiceformat[$key] = $matchsub->answertextformat ?? FORMAT_HTML;
             }
 
             if ($matchsub->questiontext !== '') {

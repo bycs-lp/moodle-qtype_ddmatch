@@ -38,6 +38,8 @@ require_once($CFG->dirroot . '/question/type/match/question.php');
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class qtype_ddmatch_question extends qtype_match_question {
+    /** @var array choice text formats keyed by choice id. */
+    public $choiceformat = array();
 
     public function get_question_summary() {
         $question = $this->html_to_text($this->questiontext, $this->questiontextformat);
